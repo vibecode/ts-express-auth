@@ -3,7 +3,9 @@ import { router } from './routes'
 import bodyParser from 'body-parser'
 import cookieSession from 'cookie-session'
 
-import './controllers/loginController'
+import './controllers/LoginController'
+import './controllers/RootController'
+
 import { AppRouter } from './AppRouter'
 
 const controllerRouter = <express.Router>new AppRouter()

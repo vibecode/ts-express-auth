@@ -4,7 +4,7 @@ import { get, post, controller, use, bodyValidator } from './decorators'
 @controller('/auth')
 class LoginController {
   @get('/login')
-  @use(logger)
+  // @use(logger)
   getLogin(req: Request, res: Response): void {
     res.send(`
         <form method="Post">
@@ -26,7 +26,7 @@ class LoginController {
   postLogin(req: Request, res: Response) {
     const { email, password } = req.body
 
-    if (email === 'hi@hi.com' && password === 'password') {
+    if (email === 'test' && password === 'test') {
       req.session = { loggedIn: true }
       res.redirect('/')
     } else {
